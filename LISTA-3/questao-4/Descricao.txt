@@ -1,0 +1,5 @@
+    Desenvolva um programa para um setor de vendas e uma empresa onde será gerado 
+um objeto Pedidos que terá as seguintes características: número, data, cliente valor;
+O atributo número será um atributo estático da classe para gerar um número 
+incremental único para todos os pedidos gerado sempre que necessário.
+Para testar, gere 3 pedidos onde o número inicie do 1 e vá até o número 3.

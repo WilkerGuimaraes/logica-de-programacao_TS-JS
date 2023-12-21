@@ -1,0 +1,19 @@
+1- Desenvolva um programa para uma empresa, que pretende controlar quantos 
+funcionários existem na empresa. (matrícula, nome, idade, salário). A matrícula seria o 
+atributo estático da classe para gerar um número incremental sempre que um novo 
+funcionário for cadastrado.
+
+2- Aprimore o programa da questão 1, atribuindo um setor de trabalho para cada 
+funcionário. O setor seria composto por um código e um nome. Então cada funcionário 
+passaria a ter um objeto do setor ao qual ele fosse alocado. 
+Premissas da classe Setor: Além do código e do nome, a classe Setor teria um atributo 
+estático para realizar uma contagem de setores criados; O atributo estático ao ser 
+incrementado, repassaria este valor para o atributo código que não é estático a fim de 
+guardar o valor que foi incrementado. Neste momento também se deve receber o nome 
+do Setor e guardar no atributo nome do setor. Por fim, ao imprimir os dados do 
+funcionário, também se deve imprimir o código e o nome do setor em que o funcionário 
+foi alocado, exatamente como segue abaixo:
+
+    Matrícula: 1 | Nome: José | Idade: 20 | Salário: 1200.0 | Setor :3-T.I.
+    Matrícula: 2 | Nome: Maria | Idade: 25 | Salário: 3500.0 | Setor :1-Administração
+    Matrícula: 3 | Nome: João | Idade: 30 | Salário: 875.79 | Setor :2-Contabilidade
