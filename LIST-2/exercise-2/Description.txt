@@ -1,0 +1,7 @@
+    Write a typescript program that calculates the area and perimeter of a rectangle
+using encapsulation. To do this, create a Rectangle class with the attributes
+private height and width. This class will have methods that calculate the area (height *
+width) and the perimeter (height * 2) + (width * 2). In another RectangleTest class,
+Instantiate an object of the Rectangle class and pass the height and width values ​​as
+parameter for the created methods. Finally, print the area and perimeter of the rectangle
+in this second class.

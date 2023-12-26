@@ -1,0 +1,6 @@
+    Write a program in TypeScript to store a person's name and age. In this
+class, create the reading (get()) and manipulation (set()) methods for the attributes.
+Also create a method to return the values ​​of the attributes of this class as a
+String (toString()). Create another PessoaTeste class, then you must instantiate an object from
+class Pessoa and pass the name and age data as a parameter to the constructor. Finally, print
+the data in this second class by calling the method that returns a large String.
