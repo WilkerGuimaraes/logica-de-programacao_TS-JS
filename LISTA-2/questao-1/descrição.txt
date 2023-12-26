@@ -1,6 +1,0 @@
- Escreva um programa em TypeScript para armazenar o nome e a idade de uma pessoa. Nesta 
-classe, crie os métodos de leitura (get()) e os de manipulação (set()) para os atributos. 
-Crie também um método para retornar os valores dos atributos desta classe como uma 
-String (toString()). Crie outra classe PessoaTeste, em seguida você deve instanciar um objeto da 
-classe Pessoa e passe os dados de nome e idade como parâmetro para o construtor. Por fim, imprima 
-os dados nesta segunda classe chamando o método que retorna uma grande String.
