@@ -1,0 +1,5 @@
+    Develop a program for a sales department and a company where it will be generated
+an Orders object that will have the following characteristics: number, date, customer value;
+The number attribute will be a static attribute of the class to generate a number
+Single incremental for all orders generated whenever necessary.
+To test, generate 3 requests where the number starts from 1 and goes to number 3.

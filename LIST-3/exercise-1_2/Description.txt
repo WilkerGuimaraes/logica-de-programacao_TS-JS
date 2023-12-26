@@ -1,0 +1,19 @@
+1- Develop a program for a company, which intends to control how many
+employees exist in the company. (registration number, name, age, salary). Registration would be
+static attribute of the class to generate an incremental number whenever a new
+employee is registered.
+
+2- Improve the program in question 1, assigning a work sector to each
+employee. The sector would consist of a code and a name. So each employee
+would now have an object from the sector to which it was allocated.
+Assumptions of the Setor class: In addition to the code and name, the Sector class would have an attribute
+static to perform a count of created sectors; The static attribute when being
+incremented, I would pass this value to the code attribute that is not static in order to
+save the value that was increased. At this point you should also receive the name
+of the Sector and save it in the sector name attribute. Finally, when printing the data from the
+employee, you must also print the code and name of the sector in which the employee
+was allocated, exactly as follows:
+
+    Registration: 1 | Name: Carlos | Age: 20 | Salary: 1200.0 | Departament: 3-I.T.
+    Registration: 2 | Name: Maria | Age: 25 | Salary: 3500.0 | Departament: 1-Administration
+    Registration: 3 | Name: Diego | Age: 30 | Salary: 875.79 | Departament: 2-Accounting

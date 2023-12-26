@@ -1,0 +1,5 @@
+    Develop a program that calculates the discount value in a sales operation.
+The Sales class must have a constructor where the value of the static variable discount
+will be 30% and there will be a getDescontoTaxamethod that will receive a value where
+will have a test if the value received is 1, if yes, then the discount will be 10%, if
+Otherwise, the discount will be the discount value already informed in the class constructor.
