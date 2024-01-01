@@ -1,0 +1,8 @@
+• Create the Property class, which has an address and a price.
+• Create a NewProperty class, which inherits from Property and has an additional value in the price.
+• Create methods for accessing and printing this additional value.
+• Create a UsedProperty class, which inherits from Property and has a discount in the price.
+• Create methods for accessing and printing this discount.
+• Create a PropertySale class with the main() method.
+• In this method: Create a property. Ask the user to enter 1 for new or 2 for used. According to the user's 
+choice, print the final value of the property.

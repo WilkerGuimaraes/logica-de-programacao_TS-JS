@@ -1,0 +1,12 @@
+• Create a class called Ticket that has a value in Brazilian real and a method printValue().
+• Create a VIP class that inherits from Ticket and has an additional value.
+• Create a method that returns the value of the VIP ticket (with the additional amount included).
+• Create a Normal class that inherits from Ticket and has a method that prints: "Normal Ticket".
+• Create a LowerBox class (which has the location of the ticket and methods to access and print this location) 
+and a UpperBox class, which is more expensive (has an additional value). This class also has a method to 
+return the ticket value. Both classes inherit from the VIP class.
+• Create a BuyTicket class as the main class.
+• In this class, create the main() method where: Create a ticket. Ask the user to enter 1 for normal and 2 
+for VIP. According to the user's choice, state whether the ticket is normal or VIP. If it is VIP, ask him to 
+enter 1 for upper box and 2 for lower box. According to the user's choice, report whether the VIP choice is 
+upper box or lower box. Print the ticket value.
