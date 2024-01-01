@@ -1,0 +1,5 @@
+Implement:
+
+a- A class named Account with a 'balance' attribute and methods 'deposit' and 'withdraw' to increase and decrease the 'balance' attribute, respectively, by a specific value. The 'balance' attribute can be negative.
+
+b- Implement a subclass of Account called SavingsAccount. SavingsAccount should have the 'interestDay' attribute (of type int) that stores the day of the month when the savings interest occurs. Additionally, it should have two methods necessary to read and modify the 'interestDay' attribute.

@@ -1,0 +1,12 @@
+Implement the following program for equipment control:
+
+a- Implement a class called Equipment with an attribute 'on' (boolean type) and 
+methods 'turnOn' and 'turnOff'. The 'turnOn' method sets the 'on' attribute to true, 
+and the 'turnOff' method sets the 'on' attribute to false.
+
+b- Implement a class called SoundEquipment that inherits the characteristics of 
+Equipment and has attributes 'volume' (short type) ranging from 0 to 10, and 
+'stereo' (boolean type). The class should also have methods to read and modify 
+the volume (getters and setters), as well as methods 'mono' and 'stereo'. The 'mono' 
+method sets the 'stereo' attribute to true. When turning on the sound equipment 
+via the 'turnOn' method, its volume is automatically set to 5.

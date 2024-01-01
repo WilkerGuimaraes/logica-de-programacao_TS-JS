@@ -1,0 +1,7 @@
+Implement the following classes:
+a- A class named Transport with attributes 'turnedOn' (boolean type) and 'speed' (int type), and methods 'turnOn' and 'turnOff'. 
+The 'turnOn' method sets 'turnedOn' to true, and the 'turnOff' method sets 'turnedOn' to false, also setting 'speed' to zero. 
+Additionally, create getter and setter methods to modify the 'speed' attribute, ensuring that the speed cannot be negative.
+
+b- A subclass of Transport called Car. Car should have the attribute 'mileage' (int type) and the necessary methods to read and write (getters and setters). 
+The mileage cannot be negative or exceed the value of 999999. The Car's speed cannot be negative or exceed 200.

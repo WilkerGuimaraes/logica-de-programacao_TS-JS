@@ -1,0 +1,37 @@
+// Write the classes as follows:
+
+Write the classes as follows:
+
+a- A class called Person, with attributes name (type String) and lastName (type string). Each of these attributes must have methods to read and modify (getters and
+setters). The Person class must also have a method called getFullName that takes no input parameters and returns the concatenation of the name attribute 
+with the lastName attribute. Additionally, the class should have a constructor with no parameters and another constructor that receives the name and 
+lastName as parameters and respectively modifies the name and lastName attributes.
+
+b- A subclass called Employee. The Employee class should have attributes registrationNumber (type int) and salary (type double), with their respective methods 
+for reading and modification (getters and setters). An employee's salary must never be negative. Every employee receives their salary in two installments, with 
+60% in the first installment and 40% in the second installment. Thus, write the methods getSalaryFirstInstallment that returns the value of the first installment of the salary (60%) and 
+getSalarySecondInstallment that returns the value of the second installment of the salary (40%).
+
+c- A subclass of Employee called Professor. Every professor receives their salary in a single installment. Thus, it is necessary to override the methods 
+getSalaryFirstInstallment and getSalarySecondInstallment. The getSalaryFirstInstallment method of the Professor class should return the full value of the professor's salary 
+and the getSalarySecondInstallment method should return zero.
+
+d- Create a class UsePerson that instantiates the following objects:
+Person 1(Person)
+name: José
+lastName: Manoel
+
+Person 2(Employee)
+name: Leandro
+lastName: Charles
+salary: 2000.00
+
+Person 3(Professor)
+name: Rita
+lastName: Cassia
+salary: 500.00
+
+Then perform the following operations following the sequence of orders:
+
+e- Display the output of the getFullName method for all 3 objects.
+f- Display the output of the getSalaryFirstInstallment and getSalarySecondInstallment methods for the objects in items person2 and person3.
