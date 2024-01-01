@@ -1,5 +1,0 @@
-    Desenvolva um programa que calcule o valor de desconto em uma operação de vendas. 
-A classe Vendas deverá ter um construtor onde o valor da variável estática desconto 
-será de 30% e haverá um método obterTaxaDeDesconto que receberá um valor onde 
-terá um teste se o valor recebido for 1, se sim, então o desconto será de 10%, caso 
-contrário o desconto será o valor do desconto já informado no construtor da classe.
