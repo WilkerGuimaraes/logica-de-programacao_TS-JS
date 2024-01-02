@@ -1,0 +1,38 @@
+Here's the translation of the provided text:
+
+• Create a class called Vehicle, which will contain the following private attributes: chassis (String), type
+(car or bicycle - String), maxSpeed (number), and cont (number) as static. This class should have a
+constructor that initializes all attributes and increments this counter (cont).
+
+Add to the Vehicle class the following methods:
+• getters/setters for all attributes;
+• clean: a public method that, when called, prints the following message: "The vehicle
+VEHICLE_TYPE", with CHASSIS is being cleaned;
+• adjust: a public method that, when called, prints a message saying: "The vehicle
+VEHICLE_TYPE", with CHASSIS is being adjusted;
+• incrementSpeed: a public method that receives an integer value and adds this integer to
+the maxSpeed of the vehicle and prints a message saying: "The vehicle VEHICLE_TYPE",
+with CHASSIS now has a maxSpeed of km/h.
+
+• Create two subclasses for Vehicle:
+• One called Bicycle, which will have the private attribute nrGears (number);
+• One called Car, which will have the private attribute fuel (number).
+Create for both subclasses a constructor that initializes all attributes. Remember that since they
+inherit from Vehicle, they also have the attributes that Vehicle has.
+
+Add to the Car class the following method:
+• changeOil: a public method that prints a message saying: "The vehicle VEHICLE_TYPE, with CHASSIS changed
+the oil".
+
+In the Bicycle class, the following method:
+• increaseGear: a public method that receives an integer and adds this integer to the nrGears of
+the bicycle. In addition, it increases the speed of the bicycle by calling the superclass method
+(incrementSpeed), and passes the resulting integer value of the expression: ((nrGears of
+the bicycle/superclass maxSpeed)*100). At this point, the superclass method
+will report the new speed.
+
+• Create a VehicleTest class with a main method, and create 3 Bicycles and 2 Cars in a way that always
+keeps track of the quantity of vehicles being created. Then call the adjust and clean methods
+of these objects. Also, call the increaseGear method for objects that are of type Bicycle and pass
+some different value. Now call the increase speed method for Car objects. Call the change oil method
+for Car objects. Finally, obtain the quantity of vehicles that were created.
