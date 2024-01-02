@@ -1,0 +1,27 @@
+Here's the translation of the provided text:
+
+• Create a TypeScript program that implements the scenario considering the composition between classes:
+
+Composition ---♦
+
+Manufacturer Class ---♦ Car Class ---♦ Fleet Class
+Manufacturer Class ---♦ Tire Class ---♦ Car Class
+Manufacturer Class ---♦ Truck Class ---♦ Fleet Class
+Manufacturer Class ---♦ Gear Type Class ---♦ Gear Class ---♦ Truck Class
+Manufacturer Class ---♦ Body Class ---♦ Truck Class
+Engine Class ---♦ Car Class
+Engine Class ---♦ Truck Class
+
+Attributes:
+
+Car Class { + model: string, + licensePlate: string}
+Engine Class { + power: number, + chassis: string, + torque: number}
+Manufacturer Class { + name: string, + cnpj: string}
+Tire Class { + diameter: number, + measures: number}
+Truck Class { + model: string, + licensePlate: string, + doubleCab: boolean}
+Fleet Class { + name: string, + type: string, + responsible: string}
+Gear Type Class { + transmission: string}
+Gear Class { + quantity: number}
+Body Class { + bodyType: string}
+
+• Finally, create a class called Principal to use the objects according to the planned composition.
