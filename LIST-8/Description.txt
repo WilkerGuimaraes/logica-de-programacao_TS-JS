@@ -1,0 +1,37 @@
+1- Create a class called Person, containing encapsulated attributes with their respective getters and 
+setters, and also the default constructor with attributes declared as `any` so that they are optional 
+when instantiated. Attributes: name, address, and phone;
+
+2- As a subclass of the Person class, create the Supplier class. Each instance of the Supplier class 
+has, in addition to the attributes that characterize the Person class, the attributes creditValue 
+(corresponding to the maximum credit assigned to the supplier) and debtValue (amount of debt to the 
+supplier). Implement in the Supplier class additional getters, setters, and a method getBalance() that 
+returns the difference between the values of the creditValue and debtValue attributes. After 
+implementing the Supplier class, create an appropriate test program to verify the functionality of 
+the implemented methods in the Supplier class and those inherited from the Person class.
+
+3- As a subclass of the Person class, create the Employee class. Each instance of the Employee class 
+has, in addition to the attributes that characterize the Person class, the attributes sectorCode, 
+baseSalary, and tax (percentage of taxes retained). Implement the Employee class with getters, setters, 
+and a calculateSalary method. Write a suitable test program for the Employee class.
+
+4- Create the Administrator class as a subclass of the Employee class. A particular administrator has 
+all the attributes of the Person and Employee classes and one more attribute, helpCost (assistance 
+related to travel, stays, etc.). Note that you should redefine the inherited calculateSalary method 
+in the Administrator class (the salary of an administrator is equivalent to the salary of a regular 
+employee plus the help cost). Write a suitable test program for this class.
+
+5- Create the Worker class as a subclass of the Employee class. A specific worker has attributes from 
+both the Person and Employee classes, and also the productionValue attribute (which corresponds to 
+the monetary value of the items actually produced by the worker) and the commission attribute (which 
+corresponds to the percentage of the productionValue that will be added to the worker's base salary). 
+Note that you should redefine the inherited calculateSalary method in this subclass (the salary of a 
+worker is equivalent to the salary of a regular employee plus the commission). Write a suitable test 
+program for this class.
+
+6- Create the Seller class as a subclass of the Employee class. A specific seller has attributes, in 
+addition to the attributes of the Person and Employee classes, the salesValue attribute (corresponding 
+to the monetary value of the items sold) and the commission attribute (percentage of the salesValue 
+that will be added to the base salary of the Seller). Note that you should redefine the inherited 
+calculateSalary method in this subclass (the salary of a seller is equivalent to the salary of a 
+regular employee plus the commission). Write a suitable test program for this class.
