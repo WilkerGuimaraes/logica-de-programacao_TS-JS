@@ -1,0 +1,5 @@
+Write a class that has an attribute of type integer named n1 and a method called `printNumber()` to print 
+the value of n1. Create a subclass of this class that also has an attribute of type integer named n2 and 
+override the method of the superclass to print the value of n2. Then create a main class that has an object 
+of the subclass and use it to assign values to n1 and n2. Afterward, call the `printNumber()` method using 
+this object and analyze the result.
