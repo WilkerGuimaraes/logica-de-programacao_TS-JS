@@ -1,0 +1,20 @@
+
+Create an abstract class 'Person' that has a private 'name' attribute, a public constructor,
+a 'get' method for the attribute, and an abstract method 'getDescription'.
+
+Create a class 'Employee' that inherits from the abstract class 'Person'.This class will have the 'name' 
+attribute from the superclass and a private 'salary' attribute.
+
+It will have methods 'getSalary' that returns the salary and 'getDescription' that returns the name 
+and salary. It will also have an 'updateSalary' method with a 'byPercentage' argument of type double
+that will adjust the salary: salary * byPercentage/100 and update the salary.
+
+Create a 'Student' class that inherits from the abstract class 'Person'.This class passes the name to 
+the superclass constructor and has a private String attribute for the study area.It will have a 
+'getDescription' method that returns the student's name and study area.
+
+Finally, create a 'PersonTest' class to test the 'Person' class. Instantiate the 'person' object as 
+an array of two positions. Fill the 'person' array with 'Student' and 'Employee' objects.
+Then, print the names and descriptions of all 'Person' objects.
+Note: For 'Employee' objects, display the data as name and salary; for 'Student' objects, display name 
+and study area.

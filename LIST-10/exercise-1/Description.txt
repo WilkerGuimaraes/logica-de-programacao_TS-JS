@@ -1,0 +1,17 @@
+Create an abstract class `MathematicalOperation`. This class should implement basic operations
+(addition, subtraction, division, and multiplication). Create an abstract method `calculate` with two 
+double arguments.
+
+Create a class `Addition` that inherits from the abstract class `MathematicalOperation` and generates a 
+method that returns the sum of the two numbers.
+
+Create a class `Subtraction` that inherits from the abstract class `MathematicalOperation` and generates 
+a method that returns the subtraction of the numbers.
+
+Finally, create a class `Accounts` that has a static method `showCalculation` that takes an object of type 
+`MathematicalOperation` as well as two numbers as parameters. Print the calculation result.
+
+To demonstrate polymorphism, make a call through the `showCalculation` method by instantiating an
+`Addition` object and passing two parameters.
+
+Following the previous item, make another call to the method, but this time for subtraction.
