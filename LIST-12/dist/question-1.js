@@ -1,240 +1,240 @@
 "use strict";
-class Transporte {
-    constructor(nome, numeroPassageiro, velocidadeAtual) {
-        this.nome = nome;
-        this.numeroPassageiro = numeroPassageiro;
-        this.velocidadeAtual = velocidadeAtual;
+class Transport {
+    constructor(name, passengerNumber, currentSpeed) {
+        this.name = name;
+        this.passengerNumber = passengerNumber;
+        this.currentSpeed = currentSpeed;
     }
 }
-class TransporteAereo extends Transporte {
-    constructor(nome, numeroPassageiro, velocidadeAtual, altitudeAtual) {
-        super(nome, numeroPassageiro, velocidadeAtual);
-        this.altitudeAtual = altitudeAtual;
+class AirTransport extends Transport {
+    constructor(name, passengerNumber, currentSpeed, currentAltitude) {
+        super(name, passengerNumber, currentSpeed);
+        this.currentAltitude = currentAltitude;
     }
 }
-class Aviao extends TransporteAereo {
-    constructor(nome, numeroPassageiro, velocidadeAtual, altitudeAtual, numeroMotores) {
-        super(nome, numeroPassageiro, velocidadeAtual, altitudeAtual);
-        this.numeroMotores = numeroMotores;
-        this.motorLigado = false;
+class Airplane extends AirTransport {
+    constructor(name, passengerNumber, currentSpeed, currentAltitude, engineNumber) {
+        super(name, passengerNumber, currentSpeed, currentAltitude);
+        this.engineNumber = engineNumber;
+        this.engineOn = false;
     }
-    estaParado() {
-        return this.velocidadeAtual === 0 && this.altitudeAtual === 0;
+    isStopped() {
+        return this.currentSpeed === 0 && this.currentAltitude === 0;
     }
-    subir(metros) {
-        if (this.motorLigado) {
-            this.altitudeAtual += metros;
-            console.log(`Subindo ${metros} metros. Altitude atual: ${this.altitudeAtual} metros.`);
+    ascend(meters) {
+        if (this.engineOn) {
+            this.currentAltitude += meters;
+            console.log(`Ascending ${meters} meters. Current altitude: ${this.currentAltitude} meters.`);
         }
         else {
-            console.log("Não é possível subir. O motor está ligado.");
+            console.log("Cannot ascend. The engine is off.");
         }
     }
-    descer(metros) {
-        if (this.motorLigado) {
-            if (this.altitudeAtual >= metros) {
-                this.altitudeAtual -= metros;
-                console.log(`Descendo ${metros} metros. Altitude atual: ${this.altitudeAtual} metros.`);
+    descend(meters) {
+        if (this.engineOn) {
+            if (this.currentAltitude >= meters) {
+                this.currentAltitude -= meters;
+                console.log(`Descending ${meters} meters. Current altitude: ${this.currentAltitude} meters.`);
             }
             else {
-                console.log("Não é possível descer. Altitude mínima atingida.");
+                console.log("Cannot descend. Minimum altitude reached.");
             }
         }
         else {
-            console.log("Não é possível descer. O motor está desligado.");
+            console.log("Cannot descend. The engine is off.");
         }
     }
-    curvar(angulo) {
-        console.log(`Curvando com um ângulo de ${angulo} graus.`);
+    turn(angle) {
+        console.log(`Turning with an angle of ${angle} degrees.`);
     }
-    abastecer(qntdLitros) {
-        console.log(`Abastecendo com ${qntdLitros} litros de combustível.`);
+    refuel(liters) {
+        console.log(`Refueling with ${liters} liters of fuel.`);
     }
-    ligarMotor() {
-        this.motorLigado = true;
-        console.log("Motor ligado.");
+    startEngine() {
+        this.engineOn = true;
+        console.log("Engine started.");
     }
-    desligarMotor() {
-        this.motorLigado = false;
-        console.log("Motor desligado.");
+    stopEngine() {
+        this.engineOn = false;
+        console.log("Engine stopped.");
     }
 }
-class Balao extends TransporteAereo {
-    constructor(nome, numeroPassageiros, velocidadeAtual, altitudeAtual, pesoLargado) {
-        super(nome, numeroPassageiros, velocidadeAtual, altitudeAtual);
-        this.pesoLargado = pesoLargado;
-        this.aquecido = false;
+class HotAirBalloon extends AirTransport {
+    constructor(name, passengerNumber, currentSpeed, currentAltitude, droppedWeight) {
+        super(name, passengerNumber, currentSpeed, currentAltitude);
+        this.droppedWeight = droppedWeight;
+        this.heated = false;
     }
-    estaParado() {
-        return this.velocidadeAtual === 0 && this.altitudeAtual === 0;
+    isStopped() {
+        return this.currentSpeed === 0 && this.currentAltitude === 0;
     }
-    subir(metros) {
-        this.altitudeAtual += metros;
-        console.log(`Subindo ${metros} metros. Altirude atual: ${this.altitudeAtual} metros.`);
+    ascend(meters) {
+        this.currentAltitude += meters;
+        console.log(`Ascending ${meters} meters. Current altitude: ${this.currentAltitude} meters.`);
     }
-    descer(metros) {
-        if (this.altitudeAtual >= metros) {
-            this.altitudeAtual -= metros;
-            console.log(`Descendo ${metros} metros. Altitude atual: ${this.altitudeAtual} metros.`);
+    descend(meters) {
+        if (this.currentAltitude >= meters) {
+            this.currentAltitude -= meters;
+            console.log(`Descending ${meters} meters. Current altitude: ${this.currentAltitude} meters.`);
         }
         else {
-            console.log("Não é possível descer. Altitude mínima atingida.");
+            console.log("Cannot descend. Minimum altitude reached.");
         }
     }
-    largarPeso(peso) {
-        if (this.altitudeAtual > 0) {
-            console.log(`Largando ${peso} kg de peso.`);
-            this.pesoLargado += peso;
+    dropWeight(weight) {
+        if (this.currentAltitude > 0) {
+            console.log(`Dropping ${weight} kg of weight.`);
+            this.droppedWeight += weight;
         }
         else {
-            console.log("Não é possível largar peso. Balão no solo.");
+            console.log("Cannot drop weight. Balloon on the ground.");
         }
     }
-    aquecerAr(temp) {
-        if (this.velocidadeAtual === 0) {
-            console.log(`Aquecendo o ar a ${temp} graus Celsius.`);
-            this.aquecido = true;
+    heatAir(temp) {
+        if (this.currentSpeed === 0) {
+            console.log(`Heating the air to ${temp} degrees Celsius.`);
+            this.heated = true;
         }
         else {
-            console.log("Não é possível aquecer o ar em movimento.");
+            console.log("Cannot heat the air while in motion.");
         }
     }
-    getPesoLargado() {
-        return this.pesoLargado;
+    getDroppedWeight() {
+        return this.droppedWeight;
     }
 }
-class TransporteTerrestre extends Transporte {
-    constructor(nome, numeroPassageiro, velocidadeAtual, tipo) {
-        super(nome, numeroPassageiro, velocidadeAtual);
-        this.tipo = tipo;
+class LandTransport extends Transport {
+    constructor(name, passengerNumber, currentSpeed, type) {
+        super(name, passengerNumber, currentSpeed);
+        this.type = type;
     }
 }
-class Carro extends TransporteTerrestre {
-    constructor(nome, numeroPassageiro, velocidadeAtual, tipo, numeroCilindros) {
-        super(nome, numeroPassageiro, velocidadeAtual, tipo);
-        this.velocidadeMaxima = 200;
-        this.numeroCilindros = numeroCilindros;
-        this.motorLigado = false;
+class Car extends LandTransport {
+    constructor(name, passengerNumber, currentSpeed, type, cylinderNumber) {
+        super(name, passengerNumber, currentSpeed, type);
+        this.maxSpeed = 200;
+        this.cylinderNumber = cylinderNumber;
+        this.engineOn = false;
     }
-    estaParado() {
-        return this.velocidadeAtual === 0;
+    isStopped() {
+        return this.currentSpeed === 0;
     }
-    estacionar() {
-        if (this.estaParado()) {
-            console.log(`${this.nome} está estacionado.`);
+    park() {
+        if (this.isStopped()) {
+            console.log(`${this.name} is parked.`);
         }
         else {
-            console.log("Você precisa parar o carro antes de estacionar.");
+            console.log("You need to stop the car before parking.");
         }
     }
-    curvar(angulo) {
-        if (this.motorLigado) {
-            console.log(`${this.nome} está curvando com um ângulo de ${angulo} graus.`);
-        }
-        else {
-            console.log("Você precisa ligar o motor antes de curvar.");
-        }
-    }
-    abastecer(qntdLitros) {
-        console.log(`Abastecendo ${this.nome} com ${qntdLitros} litros de combustível.`);
-    }
-    ligarMotor() {
-        if (!this.motorLigado) {
-            console.log(`${this.nome} ligou o motor.`);
-            this.motorLigado = true;
+    turn(angle) {
+        if (this.engineOn) {
+            console.log(`${this.name} is turning with an angle of ${angle} degrees.`);
         }
         else {
-            console.log(`${this.nome} já está com o motor ligado.`);
+            console.log("You need to start the engine before turning.");
         }
     }
-    embreiar() {
-        console.log("Pressionando a embreagem.");
+    refuel(liters) {
+        console.log(`Refueling ${this.name} with ${liters} liters of fuel.`);
     }
-    acelerar(velocidadeDesejada) {
-        if (this.motorLigado) {
-            if (velocidadeDesejada <= this.velocidadeMaxima) {
-                console.log(`${this.nome} está acelerando para ${velocidadeDesejada} km/h.`);
-                this.velocidadeAtual = velocidadeDesejada;
+    startEngine() {
+        if (!this.engineOn) {
+            console.log(`${this.name} started the engine.`);
+            this.engineOn = true;
+        }
+        else {
+            console.log(`${this.name} already has the engine on.`);
+        }
+    }
+    engageClutch() {
+        console.log("Pressing the clutch.");
+    }
+    accelerate(desiredSpeed) {
+        if (this.engineOn) {
+            if (desiredSpeed <= this.maxSpeed) {
+                console.log(`${this.name} is accelerating to ${desiredSpeed} km/h.`);
+                this.currentSpeed = desiredSpeed;
             }
             else {
-                console.log(`${this.nome} ultrapassou a velocidade máxima de ${this.velocidadeMaxima} km/h.`);
+                console.log(`${this.name} exceeded the maximum speed of ${this.maxSpeed} km/h.`);
             }
         }
         else {
-            console.log("Você precisa ligar o motor antes de acelerar.");
+            console.log("You need to start the engine before accelerating.");
         }
     }
 }
-class Bicicleta extends TransporteTerrestre {
-    constructor(nome, numeroPassageiro, velocidadeAtual, tipo, numeroraios) {
-        super(nome, numeroPassageiro, velocidadeAtual, tipo);
-        this.numeroRaios = numeroraios;
-        this.emMovimento = false;
+class Bicycle extends LandTransport {
+    constructor(name, passengerNumber, currentSpeed, type, spokeNumber) {
+        super(name, passengerNumber, currentSpeed, type);
+        this.spokeNumber = spokeNumber;
+        this.inMotion = false;
     }
-    estaParado() {
-        return !this.emMovimento;
+    isStopped() {
+        return !this.inMotion;
     }
-    estacionar() {
-        if (this.estaParado()) {
-            console.log(`${this.nome} está estacionada.`);
+    park() {
+        if (this.isStopped()) {
+            console.log(`${this.name} is parked.`);
         }
         else {
-            console.log("Você precisa parar a bicicleta antes de estacionar.");
+            console.log("You need to stop the bicycle before parking.");
         }
     }
-    curvar(angulo) {
-        if (this.emMovimento) {
-            console.log(`${this.nome} está curvando com um ângulo de ${angulo} graus.`);
+    turn(angle) {
+        if (this.inMotion) {
+            console.log(`${this.name} is turning with an angle of ${angle} degrees.`);
         }
         else {
-            console.log("Você precisa pedalar antes de curvar.");
+            console.log("You need to pedal before turning.");
         }
     }
-    pedalar() {
-        if (!this.emMovimento) {
-            console.log(`${this.nome} começou a pedalar.`);
-            this.emMovimento = true;
-            this.velocidadeAtual = 10; // Ajuste a velocidade inicial conforme necessário
+    pedal() {
+        if (!this.inMotion) {
+            console.log(`${this.name} started pedaling.`);
+            this.inMotion = true;
+            this.currentSpeed = 10; // Adjust initial speed as needed
         }
         else {
-            console.log(`${this.nome} já está em movimento.`);
+            console.log(`${this.name} is already in motion.`);
         }
     }
-    pararPedalada() {
-        if (this.emMovimento) {
-            console.log(`${this.nome} parou de pedalar.`);
-            this.emMovimento = false;
-            this.velocidadeAtual = 0;
+    stopPedaling() {
+        if (this.inMotion) {
+            console.log(`${this.name} stopped pedaling.`);
+            this.inMotion = false;
+            this.currentSpeed = 0;
         }
         else {
-            console.log(`${this.nome} já está parada.`);
+            console.log(`${this.name} is already stopped.`);
         }
     }
 }
-// Testando
+// Testing
 class Main {
     static main() {
-        const aviao = new Aviao("Boeing 747", 200, 900, 10000, 4);
-        aviao.ligarMotor();
-        aviao.abastecer(5000);
-        aviao.subir(500);
-        aviao.curvar(15);
+        const airplane = new Airplane("Boeing 747", 200, 900, 10000, 4);
+        airplane.startEngine();
+        airplane.refuel(5000);
+        airplane.ascend(500);
+        airplane.turn(15);
         console.log("\n");
-        const balao = new Balao("Balão de Ar Quente", 4, 0, 0, 0);
-        console.log(balao.estaParado());
-        balao.subir(2000);
-        balao.largarPeso(100);
-        balao.aquecerAr(80);
-        balao.descer(500);
-        console.log(`Peso largado: ${balao.getPesoLargado()} kg`);
+        const hotAirBalloon = new HotAirBalloon("Hot Air Balloon", 4, 0, 0, 0);
+        console.log(hotAirBalloon.isStopped());
+        hotAirBalloon.ascend(2000);
+        hotAirBalloon.dropWeight(100);
+        hotAirBalloon.heatAir(80);
+        hotAirBalloon.descend(500);
+        console.log(`Dropped weight: ${hotAirBalloon.getDroppedWeight()} kg`);
         console.log("\n");
-        const carro = new Carro("Fusca", 4, 60, "Sedan", 4);
-        carro.ligarMotor();
-        carro.abastecer(50);
-        carro.curvar(30);
+        const car = new Car("Beetle", 4, 60, "Sedan", 4);
+        car.startEngine();
+        car.refuel(50);
+        car.turn(30);
         console.log("\n");
-        const bicicleta = new Bicicleta("Caloi", 1, 20, "BMX", 36);
-        bicicleta.curvar(45);
+        const bicycle = new Bicycle("Caloi", 1, 20, "BMX", 36);
+        bicycle.turn(45);
     }
 }
 Main.main();
